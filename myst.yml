@@ -1,0 +1,90 @@
+version: 1
+project:
+  title: Further Genealogy Research Notes
+  authors:
+    - name: Kurt Krueckeberg
+  github: kurt-krueckeberg/jb2-research
+  references:
+    nla: https://nla.krueckeberg.org/
+  plugins:
+    - flat-table.mjs
+    - link-images.mjs
+  exclude:
+    - todo.md
+  exports:
+    - format: typst
+      template: plain_typst_book
+      output: exports/book.pdf
+      id: book-pdf
+  toc:
+    - file: index.md
+    - title: Research
+      children:
+        - file: research/how-did-jhkrueckeberg-obtain-his-brinksitzer-holding.md
+        - file: research/bueckeburg-archive-organization.md
+        - file: research/general-research-plan.md
+        - file: research/openclaw-research-report.md
+        - file: research/hofnamen.md
+        - file: research/tracking-holdings-in-berenbusch.md
+        - file: research/records-with-possible-info-on-holders.md
+        - file: research/einlieger-lead-sheet.md
+        - file: research/are-there-einlieger-lists.md
+        - file: research/census-like-records-1728-1750.md
+        - file: research/other-research-leads.md
+    - title: German Names
+      children:
+        - file: names/Namenkunde.md
+        - file: names/hofname-explained.md
+          title: Hofname
+          children:
+            - file: names/hofname-in-church-registers.md
+            - file: names/suranems-nonimmutable.md
+            - file: names/hofname-vs-surname.md
+    - title: Kirchenbücher Background Information
+      children:
+        - file: church-registers/church-registers-historical-overview.md
+    - title: 1700 Calendar Change
+      children:
+        - file: calendar/gregory-calendar-introduction.md
+    - title: Bookmarked Arcinsys Documents
+      children:
+        - file: arcinsys-bookmarks/bookmarks.md
+    - title: Records Examined
+      children:
+        - file: records/records-log.md
+    - title: Contextual Sources
+      children:
+        - file: contextual-sources/funke-article/index.md
+          children:
+            - file: contextual-sources/funke-article/combined-transliteration.md
+              title: Transliteration
+            - file: contextual-sources/funke-article/translation.md
+              title: Translation
+    - title: NLA Research Strategy
+      children:
+        - file: strategy-4-nla-research/report-on-nla-research-strategy.md
+        - file: strategy-4-nla-research/openclaw-to-assess-bueckebuerg-documents.md
+    - title: Arcinsys Research Guide
+      children:
+        - file: guide-to-arcinsys/ch1.md
+        - file: guide-to-arcinsys/ch2.md
+        - file: guide-to-arcinsys/ch3.md
+        - file: guide-to-arcinsys/ch4.md
+        - file: guide-to-arcinsys/ch5.md
+        - file: guide-to-arcinsys/ch6.md
+        - file: guide-to-arcinsys/ch7.md
+        - file: guide-to-arcinsys/ch8.md
+        - file: guide-to-arcinsys/ch9.md
+        - file: guide-to-arcinsys/ch10.md
+        - file: guide-to-arcinsys/ch11.md
+        - file: guide-to-arcinsys/ch12.md
+        - file: guide-to-arcinsys/ch13.md
+        - file: guide-to-arcinsys/ch14.md
+        - file: guide-to-arcinsys/ch15.md
+        - file: guide-to-arcinsys/ch16.md
+        - file: guide-to-arcinsys/ch17.md
+site:
+  options:
+    folders: true
+    style: _static/overrides.css
+  template: book-theme
